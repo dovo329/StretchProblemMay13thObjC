@@ -16,13 +16,13 @@
 
 // create a method that will identify and return the highest number in an array
 - (void)aMethodWithArray:(NSArray *)arr {
-    int max = -2147483647;
+    int max = (int)[arr[0] integerValue];
     int maxIndex = 0;
     // assume NSArray holds integers
     //for (int num in arr) {
     for (int i=0; i<[arr count]; i++) {
         if ([arr[i] integerValue] > max) {
-            max = [arr[i] integerValue];
+            max = (int)[arr[i] integerValue];
             maxIndex = i;
             NSLog(@"Found new max value of %d at index %d", max, maxIndex);
         }
